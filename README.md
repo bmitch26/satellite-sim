@@ -83,6 +83,7 @@ System Modularity: Subsystems are separate modules that communicate via defined 
 Basic Testing: Unit tests exist for at least 3 subsystems, integration test runs a 10-minute mission simulation and checks key logs.
 
 Preliminary Technical Design:
+
 Modules:
 
 core/ -- Real-time loop, mission clock, subsystem manager
