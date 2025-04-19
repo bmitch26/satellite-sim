@@ -43,12 +43,19 @@ The following CubeSat simulates the embedded software of a CubeSat-class satelli
 -	Optional orbital tracking and visualization tools
 
 Acceptance criteria:
+
 Real-Time Main Loop: System executes tasks at fixed intervals (e.g., 1Hz tick), logs execution cycle time, and handles basic scheduling.
+
 Attitude Control (PID): Satellite adjusts its orientation to reach and maintain a target quaternion or angle. Logs errors and stabilizes within tolerance.
+
 Task Execution Framework: Periodic tasks (e.g., “take image”, “downlink telemetry”) run on a schedule and log outputs.
+
 Fault Detection System: Detects faults (e.g., orientation drift, stuck sensor) and switches to degraded or safe mode.
+
 Command Uplink/Telemetry Downlink: Accepts JSON/text-based ground commands and logs simulated telemetry (position, status, battery, mode).
+
 System Modularity: Subsystems are separate modules that communicate via defined interfaces (e.g., satellite.state, control.update(), telemetry.send()).
+
 Basic Testing: Unit tests exist for at least 3 subsystems, integration test runs a 10-minute mission simulation and checks key logs.
 
 Preliminary Technical Design:
