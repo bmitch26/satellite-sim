@@ -3,8 +3,10 @@
 from cubesat.telemetry import TelemetryTask
 
 def test_telemetry_runs_without_error(capfd):
-    task = TelemetryTask("Telemetry")
+    buffer = []
+    task = TelemetryTask("Telemetry", buffer)
     state = {"tick": 0}
     task.run(state)
     out, _ = capfd.readouterr()
-    assert "Sending telemetry" in out
+    assert "TelemetryTask" in out
+    assert buffer  # ensure packet was actually added
