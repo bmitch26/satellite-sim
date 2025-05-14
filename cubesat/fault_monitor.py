@@ -11,12 +11,12 @@ class FaultMonitorTask(BaseTask):
 
         # Simulate a synthetic fault injection at tick 5
         if state["tick"] == 5:
-            print("[FaultMonitorTask] 🚨 Fault injected! Overheating detected.")
+            print("[FaultMonitorTask] Fault injected! Overheating detected.")
             state["fault"] = True
 
         # Handle reboot command
         elif state.get("reboot_fault_monitor"):
-            print("[FaultMonitorTask] 🔄 Reboot command received. Resetting subsystem state.")
+            print("[FaultMonitorTask] Reboot command received. Resetting subsystem state.")
             state.pop("reboot_fault_monitor")
             state["fault"] = False
 
