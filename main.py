@@ -27,4 +27,4 @@ scheduler.run(total_ticks=10)
 with open("telemetry_log.json", "w") as f:
     json.dump(telemetry_buffer, f, indent=2)
 
-print("\n[Ground Station] Dumped telemetry to telemetry_log.json ✅")
+print("\n[Ground Station] Dumped telemetry to telemetry_log.json")
