@@ -1,0 +1,37 @@
+[
+  {
+    "timestamp": "2025-05-14T17:04:39.709403",
+    "tick": 1,
+    "battery": 84.32,
+    "temp": 39.2,
+    "status": "WARN"
+  },
+  {
+    "timestamp": "2025-05-14T17:04:40.111062",
+    "tick": 3,
+    "battery": 78.65,
+    "temp": 35.1,
+    "status": "WARN"
+  },
+  {
+    "timestamp": "2025-05-14T17:04:40.512784",
+    "tick": 5,
+    "battery": 93.84,
+    "temp": 39.7,
+    "status": "OK"
+  },
+  {
+    "timestamp": "2025-05-14T17:04:40.920240",
+    "tick": 7,
+    "battery": 88.41,
+    "temp": 23.3,
+    "status": "OK"
+  },
+  {
+    "timestamp": "2025-05-14T17:04:41.321680",
+    "tick": 9,
+    "battery": 99.35,
+    "temp": 29.6,
+    "status": "OK"
+  }
+]

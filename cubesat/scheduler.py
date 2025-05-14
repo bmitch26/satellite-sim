@@ -10,7 +10,7 @@ class Scheduler:
     def run(self, total_ticks=10):
         state = {"tick": 0}
         for _ in range(total_ticks):
-            print(f"\n[Tick {state['tick']}]")
+            print(f"\n[Tick {state['tick']}] -----------------------------")
             for task in self.tasks:
                 if task.should_run(state["tick"]):
                     task.run(state)
