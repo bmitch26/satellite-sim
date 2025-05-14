@@ -12,6 +12,7 @@ class Scheduler:
         for _ in range(total_ticks):
             print(f"\n[Tick {state['tick']}]")
             for task in self.tasks:
-                task.run(state)
+                if task.should_run(state["tick"]):
+                    task.run(state)
             state["tick"] += 1
             time.sleep(self.interval)

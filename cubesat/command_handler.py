@@ -1,13 +1,22 @@
-# cubesat/command_handler.py
+from cubesat.utils import BaseTask
 
-class CommandHandlerTask:
-    def __init__(self, name, command_queue=None):
-        self.name = name
-        self.command_queue = command_queue if command_queue is not None else []
+class CommandHandlerTask(BaseTask):
+    def __init__(self, name, command_queue, interval=1):
+        super().__init__(name, interval)
+        self.command_queue = command_queue
 
     def run(self, state):
-        if self.command_queue:
-            command = self.command_queue.pop(0)
-            print(f"[CommandHandlerTask] Tick {state['tick']}: Executing command: {command}")
-        else:
-            print(f"[CommandHandlerTask] Tick {state['tick']}: No commands to process.")
+        self.last_run_tick = state["tick"]
+
+        if not self.command_queue:
+            print(f"[CommandHandlerTask] Tick {state['tick']}: No commands in queue.")
+            return
+
+        cmd = self.command_queue.pop(0)
+        print(f"[CommandHandlerTask] Tick {state['tick']}: Executing command: {cmd}")
+
+        # Simulate command routing
+        if cmd["op"] == "REBOOT" and cmd["target"] == "fault_monitor":
+            state["reboot_fault_monitor"] = True
+        elif cmd["op"] == "DUMP_DATA" and cmd["target"] == "telemetry":
+            state["dump_telemetry"] = True
