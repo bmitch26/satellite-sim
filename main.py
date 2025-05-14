@@ -3,6 +3,7 @@ from cubesat.telemetry import TelemetryTask
 from cubesat.command_handler import CommandHandlerTask
 from cubesat.fault_monitor import FaultMonitorTask
 from cubesat.command_parser import CommandParser
+from cubesat.attitude_control import AttitudeControlTask
 import json
 
 parser = CommandParser()
@@ -17,7 +18,8 @@ telemetry_buffer = []
 tasks = [
     TelemetryTask("Telemetry", telemetry_buffer, interval=2),
     CommandHandlerTask("CommandHandler", command_queue, interval=1),
-    FaultMonitorTask("FaultMonitor", interval=3)
+    FaultMonitorTask("FaultMonitor", interval=3),
+    AttitudeControlTask("AttitudeControl", interval=2)
 ]
 
 scheduler = Scheduler(tasks, interval=0.2)
