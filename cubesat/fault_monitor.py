@@ -8,6 +8,11 @@ class FaultMonitorTask(BaseTask):
 
     def run(self, state):
         self.last_run_tick = state["tick"]
+        
+        # Watchdog timeout logic: if no telemetry update in 4+ ticks
+        if state["tick"] - state.get("last_telemetry_tick", -1) > 4:
+            print("[FaultMonitorTask] Watchdog timeout! Telemetry unresponsive. Resetting...")
+            state["fault"] = True
 
         # Simulate a synthetic fault injection at tick 5
         if state["tick"] == 5:

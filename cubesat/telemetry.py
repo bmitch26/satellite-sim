@@ -14,15 +14,19 @@ class TelemetryTask(BaseTask):
         self.last_run_tick = state["tick"]
         packet = TelemetryPacket(state["tick"])
         self.buffer.append(packet.to_dict())  # store raw dict
+        state["last_telemetry_tick"] = state["tick"] 
         print(f"[TelemetryTask] Tick {state['tick']}: {packet.to_json()}")
 
 
 class TelemetryPacket:
     def __init__(self, tick):
+        self.packet_type = "TELEMETRY"
+        self.packet_id = f"TM-{tick:04d}"
+        self.destination = "GROUND"
         self.timestamp = datetime.utcnow().isoformat()
         self.tick = tick
-        self.battery = round(random.uniform(70.0, 100.0), 2)   # Simulate voltage %
-        self.temp = round(random.uniform(20.0, 40.0), 1)        # Simulate °C
+        self.battery = round(random.uniform(70.0, 100.0), 2)
+        self.temp = round(random.uniform(20.0, 40.0), 1)
         self.status = "OK" if self.battery > 85 else "WARN"
 
     def to_dict(self):
@@ -30,3 +34,4 @@ class TelemetryPacket:
 
     def to_json(self):
         return json.dumps(self.__dict__)
+    
