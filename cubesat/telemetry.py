@@ -4,6 +4,7 @@ from cubesat.utils import BaseTask
 import json
 import random
 from datetime import datetime
+from rich import print
 
 class TelemetryTask(BaseTask):
     def __init__(self, name, buffer, interval=2):
@@ -15,7 +16,7 @@ class TelemetryTask(BaseTask):
         packet = TelemetryPacket(state["tick"])
         self.buffer.append(packet.to_dict())  # store raw dict
         state["last_telemetry_tick"] = state["tick"] 
-        print(f"[TelemetryTask] Tick {state['tick']}: {packet.to_json()}")
+        print(f"[purple]TelemetryTask: {packet.to_json()}[/purple]")
 
 
 class TelemetryPacket:

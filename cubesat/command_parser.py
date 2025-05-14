@@ -3,13 +3,18 @@
 import json
 
 class CommandParser:
-    def parse(self, cmd_str):
+    def parse(self, raw_str):
         try:
-            cmd = json.loads(cmd_str)
+            cmd = json.loads(raw_str)
+
+            if "op" not in cmd:
+                raise ValueError("Missing required field: 'op'")
+
+            # Only require 'target' for specific ops
+            if cmd["op"] in ["REBOOT", "DUMP_DATA"] and "target" not in cmd:
+                raise ValueError("Missing required field: 'target'")
+
+            return cmd
+
         except json.JSONDecodeError:
-            raise ValueError("Invalid JSON")
-
-        if "op" not in cmd or "target" not in cmd:
-            raise ValueError("Missing required fields")
-
-        return cmd
+            raise ValueError("Invalid JSON format")

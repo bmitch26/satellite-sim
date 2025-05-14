@@ -3,50 +3,100 @@
     "packet_type": "TELEMETRY",
     "packet_id": "TM-0001",
     "destination": "GROUND",
-    "timestamp": "2025-05-14T17:50:27.389447",
+    "timestamp": "2025-05-14T23:26:20.320657",
     "tick": 1,
-    "battery": 98.75,
-    "temp": 35.0,
+    "battery": 90.9,
+    "temp": 32.2,
     "status": "OK"
   },
   {
     "packet_type": "TELEMETRY",
     "packet_id": "TM-0003",
     "destination": "GROUND",
-    "timestamp": "2025-05-14T17:50:27.791215",
+    "timestamp": "2025-05-14T23:26:22.535718",
     "tick": 3,
-    "battery": 90.55,
-    "temp": 28.7,
+    "battery": 93.78,
+    "temp": 25.7,
     "status": "OK"
   },
   {
     "packet_type": "TELEMETRY",
     "packet_id": "TM-0005",
     "destination": "GROUND",
-    "timestamp": "2025-05-14T17:50:28.197793",
+    "timestamp": "2025-05-14T23:26:30.636172",
     "tick": 5,
-    "battery": 82.5,
-    "temp": 22.7,
-    "status": "WARN"
+    "battery": 90.07,
+    "temp": 21.7,
+    "status": "OK"
   },
   {
     "packet_type": "TELEMETRY",
     "packet_id": "TM-0007",
     "destination": "GROUND",
-    "timestamp": "2025-05-14T17:50:28.599012",
+    "timestamp": "2025-05-14T23:26:40.182233",
     "tick": 7,
-    "battery": 81.34,
-    "temp": 24.6,
-    "status": "WARN"
+    "battery": 89.94,
+    "temp": 30.0,
+    "status": "OK"
   },
   {
     "packet_type": "TELEMETRY",
     "packet_id": "TM-0009",
     "destination": "GROUND",
-    "timestamp": "2025-05-14T17:50:29.007947",
+    "timestamp": "2025-05-14T23:27:12.574696",
     "tick": 9,
-    "battery": 88.42,
-    "temp": 25.3,
+    "battery": 98.41,
+    "temp": 28.1,
     "status": "OK"
+  },
+  {
+    "packet_type": "TELEMETRY",
+    "packet_id": "TM-0011",
+    "destination": "GROUND",
+    "timestamp": "2025-05-14T23:28:13.400501",
+    "tick": 11,
+    "battery": 99.79,
+    "temp": 37.9,
+    "status": "OK"
+  },
+  {
+    "packet_type": "TELEMETRY",
+    "packet_id": "TM-0013",
+    "destination": "GROUND",
+    "timestamp": "2025-05-14T23:29:11.341336",
+    "tick": 13,
+    "battery": 95.33,
+    "temp": 39.4,
+    "status": "OK"
+  },
+  {
+    "packet_type": "TELEMETRY",
+    "packet_id": "TM-0015",
+    "destination": "GROUND",
+    "timestamp": "2025-05-14T23:29:12.238129",
+    "tick": 15,
+    "battery": 97.59,
+    "temp": 24.2,
+    "status": "OK"
+  },
+  {
+    "packet_type": "TELEMETRY",
+    "packet_id": "TM-0017",
+    "destination": "GROUND",
+    "timestamp": "2025-05-14T23:29:14.139829",
+    "tick": 17,
+    "battery": 76.64,
+    "temp": 32.4,
+    "status": "WARN"
+  },
+  {
+    "packet_type": "TELEMETRY",
+    "packet_id": "TM-0019",
+    "destination": "GROUND",
+    "timestamp": "2025-05-14T23:29:15.208950",
+    "tick": 19,
+    "battery": 79.87,
+    "temp": 27.0,
+    "status": "WARN"
   }
 ]
