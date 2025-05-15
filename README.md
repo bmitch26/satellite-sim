@@ -2,11 +2,8 @@
 
 ![image](https://github.com/user-attachments/assets/65c65772-1c62-4c92-aa69-53bcdb58d39f)
 
-A modular, real-time simulation of CubeSat flight software with autonomous fault handling, telemetry logging, and ground CLI control.
-
-## What it does
-
-This project simulates a simplified real-time flight software stack for a CubeSat. It includes a round-robin scheduler, telemetry packetization, orbit and sunlight modeling, and manual override via a ground station CLI.
+## Project Summary
+This project presents a modular, real-time simulation of CubeSat flight software with autonomous fault handling, telemetry logging, and ground CLI control. This project simulates a simplified real-time flight software stack for a CubeSat. It includes a round-robin scheduler, telemetry packetization, orbit and sunlight modeling, and manual override via a ground station CLI.
 
 ## Key Features
 - Manual and timed tick modes for simulating time-based control
