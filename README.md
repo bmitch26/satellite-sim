@@ -1,4 +1,4 @@
-CubeSat Flight Software Simulation Project:
+# CubeSat Flight Software Simulation Project:
 
 Goal: Build a modular simulation of CubeSat flight software capable of controlling attitude, executing scheduled tasks, and responding to telemetry/command cycles with fault-aware behavior.
 
