@@ -16,6 +16,7 @@ This project simulates a simplified real-time flight software stack for a CubeSa
 - Unit-tested CLI parser and logic with 'pytest'
 
 ## Project Structure
+<pre> 
 ├── main.py
 ├── cubesat/
 │   ├── scheduler.py
@@ -32,4 +33,5 @@ This project simulates a simplified real-time flight software stack for a CubeSa
     ├── test_command_parser.py
     ├── test_fault_monitor.py
     ├── test_telemetry.py
-    ├── test_scheduler.py
+    ├── test_scheduler.py 
+</pre>
