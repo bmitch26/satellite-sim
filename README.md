@@ -1,5 +1,7 @@
 # CubeSat Flight Software (FSW) Simulator
 
+High-Levl Demo: https://www.youtube.com/watch?v=AxLYRuTBAk
+
 ![image](https://github.com/user-attachments/assets/65c65772-1c62-4c92-aa69-53bcdb58d39f)
 
 ## Project Summary
