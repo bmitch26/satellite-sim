@@ -10,7 +10,7 @@ This project presents a modular, real-time simulation of CubeSat flight software
 ## Key Features
 - Manual and timed tick modes for simulating time-based control
 - Real-time telemetry with JSON logging (battery, temp, orbit, etc.)
-- Fault injection and autonmatic SAFE mode switching
+- Fault injection and automatic SAFE mode switching
 - Mode manager logic for autonomy and recovery
 - Command parsing from CLI (REBOOT, SET_MODE, etc.)
 - Telemetry saved to 'telemetry_log.json' for post-mission analysis
