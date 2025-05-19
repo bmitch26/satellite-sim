@@ -46,9 +46,9 @@ pip install -r requirements.txt
 python main.py
 
 ## Sample ground station commands
-{"op": "REBOOT", "target": "fault_monitor"}
-{"op": "DUMP_DATA", "target": "telemetry"}
-{"op": "SET_MODE", "value": "SAFE"}
+1. {"op": "REBOOT", "target": "fault_monitor"}
+2. {"op": "DUMP_DATA", "target": "telemetry"}
+3. {"op": "SET_MODE", "value": "SAFE"}
 
 ## Sample Output
 {
