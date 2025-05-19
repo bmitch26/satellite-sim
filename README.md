@@ -40,7 +40,7 @@ This project presents a modular, real-time simulation of CubeSat flight software
 ## How to run
 1. Clone the repo:
 git clone https://github.com/bmitch26/cubesat-fsw-sim.git
-2. Install dependencies:
+2. Install the dependencies:
 pip install -r requirements.txt
 3. Run the simulator:
 python main.py
