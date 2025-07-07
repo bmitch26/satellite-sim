@@ -1,5 +1,7 @@
 # CubeSat Flight Software (FSW) Simulator
 
+*Note: Though this was initially created in Python, it has since been re-created in C++. I utilized socket programming in C++ to create a TCP uplink client for command control as well as UDP downlink client to the simulated ground station for telemetry. Additionally, the commands are now sent in normal human language from the operator to the flight system.
+
 High-Level Demo: https://www.youtube.com/watch?v=AxLYRuTBAk
 
 ![image](https://github.com/user-attachments/assets/65c65772-1c62-4c92-aa69-53bcdb58d39f)
