@@ -8,38 +8,6 @@ class Scheduler:
         self.tasks = tasks
         self.interval = interval
 
-    
-    # def run(self, total_ticks=10):
-    #     from cubesat.command_parser import CommandParser
-    #     import queue
-
-    #     state = {"tick": 0}
-    #     command_queue = queue.Queue()
-    #     parser = CommandParser()
-
-    #     for _ in range(total_ticks):
-    #         # Print Tick Header
-    #         print(f"\n[bold cyan]TICK {state['tick']} ─────────────────────────────────────[/bold cyan]")
-
-    #         # Run scheduled tasks
-    #         for task in self.tasks:
-    #             if task.should_run(state["tick"]):
-    #                 task.run(state)
-
-    #         # CLI Input for this tick (no threading required anymore!)
-    #         cmd_str = input("Ground Station CLI - Type JSON command or just press Enter:").strip()
-    #         if cmd_str:
-    #             try:
-    #                 cmd = parser.parse(cmd_str)
-    #                 command_queue.put(cmd)
-    #             except ValueError as e:
-    #                 print(f"CLI Error: {e}")
-
-    #         # Pass the shared queue back to the CommandHandler
-    #         state["command_queue"] = command_queue
-
-    #         state["tick"] += 1
-
     def run(self, total_ticks=10, manual=False):
         from cubesat.command_parser import CommandParser
         import queue
